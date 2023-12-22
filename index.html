@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="rndpwddes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/382904f6bd.js" crossorigin="anonymous"></script>
+    <title>XAKLY</title>
+    <link rel="shortcut icon" href="dadaez.png" type="images/png"/>
+
+    <h3>XAKLY</h3>
+</head>
+<body>
+    <div class="main">
+        <div class="text"><br>PLEASE PRESS TO GENERATE PASSWORD TO GET ONE</div>
+        <div class="input_data">
+            <div class="display">
+                <input type="text" placeholder="8 RANDOM CHARACTERS " readonly>
+                <span class="far fa-copy" onclick="copy()" ></span>
+            </div>
+            <button class="btn1">GENERATE PASSWORD</button>
+        </div>
+    </div>
+    <div class="main2">
+        <div class="text">PLEASE PRESS TO GENERATE PASSWORD TO GET ONE INCLUDING  /(!*-...</div>
+        <div class="input_data2">
+            <div class="display2">
+                <input type="text" class="inpt2" placeholder="8 RANDOM CHARACTERS " readonly>
+                <span class="far fa-copy" onclick="copy2()" ></span>
+            </div>
+            <button class="btn2">GENERATE PASSWORD</button>
+        </div>
+    </div>
+   
+  <script>
+      const display = document.querySelector("input");
+       button1 = document.querySelector("button");
+       copybtn = document.querySelector("span.far");
+
+      let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"     
+      button1.onclick = ()=>{
+        let i;
+        randompassword = "";
+        for(i = 0; i < 8; i++) {
+          randompassword = randompassword + chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        display.value = randompassword;
+      }
+      const display2 = document.querySelector("input.inpt2");
+       button2 = document.querySelector("button.btn2");
+       copybtn = document.querySelector("span.far");
+       let chars2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!/*-§?()#&£$%<>;:@"     
+       button2.onclick = ()=>{
+        let i;
+        randompassword2 = "";
+        for(i = 0; i < 8; i++) {
+          randompassword2 = randompassword2 + chars2.charAt(Math.floor(Math.random() * chars2.length));
+        }
+        display2.value = randompassword2;
+      }
+      function copy(){
+        display.select();
+        document.execCommand("copy");
+      }
+      function copy2(){
+        display2.select();
+        document.execCommand("copy");
+      }
+
+  </script>
+
+</body>
+<footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fas fa-envelope"></i>
+          <span class="logo_name">mekersiilyes@gmail.com</span>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/ilyes.mekersi/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/Xakly_"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/xakly.la/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+</html>
